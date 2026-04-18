@@ -7,6 +7,7 @@
 const state = {
   conversation: [], // [{role: 'user'|'assistant', content: '...'}]
   isStreaming: false,
+  accessCode: '', // stored after successful gate verification
 };
 
 // ---------- DOM refs ----------
@@ -54,6 +55,7 @@ gateForm.addEventListener('submit', async (e) => {
 
     if (data.ok) {
       sessionStorage.setItem(GATE_STORAGE_KEY, 'true');
+      state.accessCode = code;
       gateError.hidden = true;
       showWelcome();
     } else {
@@ -128,7 +130,7 @@ async function sendMessage(text) {
     const res = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages: state.conversation }),
+      body: JSON.stringify({ messages: state.conversation, code: state.accessCode }),
     });
 
     if (!res.ok) {

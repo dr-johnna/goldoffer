@@ -16,7 +16,13 @@ export default async function handler(req) {
   }
 
   try {
-    const { messages } = await req.json();
+    const { messages, code } = await req.json();
+
+    // Verify access code on every request — gate is enforced server-side
+    const expectedCode = process.env.ACCESS_CODE;
+    if (!expectedCode || typeof code !== 'string' || code.trim() !== expectedCode) {
+      return new Response('Unauthorized', { status: 401 });
+    }
 
     if (!Array.isArray(messages) || messages.length === 0) {
       return new Response('Messages required', { status: 400 });
