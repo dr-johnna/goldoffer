@@ -1,0 +1,14 @@
+{
+  "name": "goldoffer",
+  "version": "1.0.0",
+  "description": "Gold Offer Coach by Dr. Johnna. A psychology-backed AI coach for identity-based offer creation using the G.O.L.D. Framework.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  }
+}

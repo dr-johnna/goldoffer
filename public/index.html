@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gold Offer Coach by Dr. Johnna. Transform your unique strengths into a signature offer using the G.O.L.D. Framework.">
+  <title>Gold Offer Coach | Dr. Johnna</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Password Gate -->
+  <div id="gate" class="gate">
+    <div class="gate-inner">
+      <p class="gate-eyebrow">Private access</p>
+      <h1 class="gate-title">Gold Offer Coach</h1>
+      <p class="gate-lede">A psychology-backed space to shape a signature offer that is true to you and irresistible to the right clients.</p>
+      <form id="gate-form" class="gate-form" autocomplete="off">
+        <label for="gate-input" class="sr-only">Access code</label>
+        <input type="password" id="gate-input" class="gate-input" placeholder="Access code" required>
+        <button type="submit" class="gate-button">Enter</button>
+      </form>
+      <p id="gate-error" class="gate-error" hidden>That code did not match. Please try again.</p>
+      <p class="gate-footer">For Legacy Lab members and Dr. Johnna Consulting clients only.</p>
+    </div>
+  </div>
+
+  <!-- Welcome Screen -->
+  <div id="welcome" class="welcome" hidden>
+    <header class="welcome-header">
+      <span class="brand-mark">Dr. Johnna</span>
+    </header>
+
+    <main class="welcome-main">
+      <p class="eyebrow">The G.O.L.D. Framework</p>
+      <h1 class="welcome-title">Your gold is already here. <em>Let's shape it into an offer.</em></h1>
+      <p class="welcome-lede">This is your safe space to shape a signature offer that is true to you and irresistible to the right clients. Together we will uncover your gold, align it with real-world needs, and build a simple, launch-ready offer that energizes you.</p>
+
+      <div class="framework">
+        <div class="framework-item">
+          <span class="framework-letter">G</span>
+          <span class="framework-text">Ground in your greatness</span>
+        </div>
+        <div class="framework-item">
+          <span class="framework-letter">O</span>
+          <span class="framework-text">Own your gold</span>
+        </div>
+        <div class="framework-item">
+          <span class="framework-letter">L</span>
+          <span class="framework-text">Leverage what you have</span>
+        </div>
+        <div class="framework-item">
+          <span class="framework-letter">D</span>
+          <span class="framework-text">Design a profitable offer</span>
+        </div>
+      </div>
+
+      <h2 class="welcome-prompt">What brings you here today?</h2>
+      <div class="entry-paths">
+        <button class="entry-path" data-starter="I am still figuring out what makes me uniquely valuable. I would love help uncovering my strengths and what I am meant to offer.">
+          <span class="entry-path-label">Clarify my strengths</span>
+          <span class="entry-path-sub">I am still figuring out what makes me uniquely valuable.</span>
+        </button>
+        <button class="entry-path" data-starter="I am ready to design an authentic, exciting offer. Help me shape my idea into something launch-ready.">
+          <span class="entry-path-label">Shape an idea into an offer</span>
+          <span class="entry-path-sub">I am ready to design an authentic, exciting offer.</span>
+        </button>
+        <button class="entry-path" data-starter="I already have an offer and I would like to refine and keep building it.">
+          <span class="entry-path-label">Refine my existing offer</span>
+          <span class="entry-path-sub">I am here to keep building what I have started.</span>
+        </button>
+        <button class="entry-path" data-starter="I have a completed offer and I would love a review. I will share the details so you can assess it using the Gold Offer Review Scorecard.">
+          <span class="entry-path-label">Review a completed offer</span>
+          <span class="entry-path-sub">Assess my offer against the Gold Offer Review Scorecard.</span>
+        </button>
+      </div>
+
+      <p class="welcome-note">Returning? Paste a summary from a previous session at any time and we will pick up where you left off.</p>
+    </main>
+
+    <footer class="welcome-footer">
+      <span>doctorjohnna.com</span>
+      <span>Built with the G.O.L.D. Framework</span>
+    </footer>
+  </div>
+
+  <!-- Chat Interface -->
+  <div id="chat" class="chat" hidden>
+    <header class="chat-header">
+      <div class="chat-header-inner">
+        <span class="brand-mark-small">Dr. Johnna · Gold Offer Coach</span>
+        <div class="chat-actions">
+          <button id="btn-download" class="chat-action" title="Download conversation as PDF">Download PDF</button>
+          <button id="btn-copy" class="chat-action" title="Copy conversation to clipboard">Copy</button>
+          <button id="btn-restart" class="chat-action chat-action-subtle" title="Start a new conversation">Start over</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="chat-main">
+      <div id="messages" class="messages"></div>
+    </main>
+
+    <footer class="chat-footer">
+      <form id="chat-form" class="chat-form" autocomplete="off">
+        <textarea id="chat-input" class="chat-input" placeholder="Share what is on your mind..." rows="1" required></textarea>
+        <button type="submit" id="chat-submit" class="chat-submit" aria-label="Send">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+      <p class="chat-disclaimer">Dr. Johnna's Gold Offer Coach offers business coaching, not therapy, medical advice, or guaranteed financial outcomes.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
