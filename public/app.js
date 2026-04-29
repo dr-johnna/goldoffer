@@ -38,7 +38,7 @@ function checkGate() {
     showWelcome();
     return;
   }
-  gate.hidden = false;
+  
 }
 
 gateForm.addEventListener('submit', async (e) => {
@@ -70,13 +70,13 @@ gateForm.addEventListener('submit', async (e) => {
 });
 
 function showWelcome() {
-  gate.hidden = true;
+  gate.classList.add("gate-exit"); setTimeout(() => gate.remove(), 400);
   welcome.hidden = false;
   chat.hidden = true;
 }
 
 function showChat() {
-  gate.hidden = true;
+  gate.classList.add("gate-exit"); setTimeout(() => gate.remove(), 400);
   welcome.hidden = true;
   chat.hidden = false;
   setTimeout(() => chatInput.focus(), 100);
