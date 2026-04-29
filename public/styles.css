@@ -187,9 +187,11 @@ body {
 }
 
 .brand-mark {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-style: italic;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .welcome-main {
@@ -357,9 +359,11 @@ body {
 }
 
 .brand-mark-small {
-  font-family: var(--font-display);
-  font-size: 0.9375rem;
-  font-style: italic;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .chat-actions {
